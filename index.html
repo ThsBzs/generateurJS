@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>Projet 5</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body> 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12" id="header">
+            <h1>Générateur de citations (très) aléatoires</h1>
+            <p>Bienvenue dans ce générateur de citations en JavaScript. Veuillez sélectionner un sujet et un nombre de phrase(s) ci-dessous.</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div id="base" > 
+        <div class="row">
+           <!--Formulaire de choix du sujet et du nombre de citations-->
+           <form class="form-inline" id="form">
+           		<label for="sujet">Sujet</label>
+                <select class="form-control" id="sujet">
+                    <option value="vie">Vie quotidienne - générateur type objet</option>
+                    <option value="animaux">Animaux  - générateur type array</option>
+                </select>
+                <label for="nombre">Nombre de citations</label>
+                <select class="form-control" id="nombre">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option> 
+                </select>
+                <button type="submit" class="btn btn-primary" id="valider">Valider</button>
+			</form>
+    	</div>
+    	<!--Contenant des citations générées-->
+    	<div class="col-sm-12 col-md-11 col-lg-8" id="containerRendu">
+        	<ul id="rendu"></ul>
+    	</div>
+    	<!--Contenant des boutons du bas-->
+    	<div class="col-sm-12 col-md-11 col-lg-8" id="boutonBas" >
+        	<div class="row">
+            	<!--Bouton pour supprimer les citations générées-->
+            	<div class="col-sm-6">
+                	<button type="button" class="btn btn-primary" id="remove">Tout supprimer</button>
+            	</div>
+           		<!--Bouton pour renouveler-->
+           	 	<div class="col-sm-6">
+                	<button type="button"  class="btn btn-primary" id="refresh">Générer un autre résultat</button>
+            	</div>
+        	</div>
+    	</div>
+    	<!--Alerte en cas de dépassement du nombre maximum-->
+    	<div class="row" >
+        	<div id = "alert">
+              <a href="#" id="close">&times;</a>
+              <strong>Désolé, 5 citations maximum !</strong> <br>
+              <span>Cliquez sur 'Tout supprimer' pour tout effacer ou 'Générer un autre résultat' pour relancer le générateur.</span>
+        	</div>
+    	</div>
+	</div>
+</div>
+<script type="text/javascript" src=main.js></script>
+
+</body>    
+</html>

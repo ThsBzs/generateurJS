@@ -1,0 +1,103 @@
+/*Fond noir, typo et couleur*/
+body{
+    background : black !important;
+    color: white !important;
+    font-family: gadugi, 'Source Sans Pro', sans-serif;
+    
+}
+/***********ALIGNEMENT GENERAL DES ELEMENTS ET CONTENUS*************/
+#header, #base, #rendu, #boutonBas, #alert{
+    text-align: center !important;
+}
+
+#header{
+    margin-top: 20px;
+}
+
+#containerRendu, #form-container, #rendu, .form-inline{
+    margin: 0 auto;
+}
+
+label{
+    margin: 10px !important;
+}
+
+/*Formulaire*/
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.form-inline label {
+    margin: 5px 10px 5px 0px;
+}
+
+/*Cadre de résultat des citaitons*/
+#rendu {
+    background-color: gray;
+    border: 3px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    list-style-type: none;
+    padding: 10px !important;
+    
+}
+
+
+/*Masquage au départ des boutons et message d'alerte*/
+#remove, #refresh{
+    visibility: hidden;
+}
+
+/*Alignement et centrage des boutons du bas*/
+#valider{
+    padding-left: 30px;
+    padding-right: 30px; 
+}
+
+#boutonBas, #alert {
+    margin: auto;
+}
+
+button {
+    margin: 15px !important;
+}
+
+#remove {
+    padding-left: 40px !important;
+    padding-right:  40px !important;
+}
+
+/*Message d'alerte dépassement quantité*/
+#alert{
+    opacity: 0;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;  
+}
+
+/*Bouton de fermeture du message d'alerte*/
+#alert a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: inherit;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    -webkit-transition: font-size 0.2s;
+}
+/*Animation du bouton de fermeture*/
+#alert a:hover{
+    font-size: 2rem;
+}
+
